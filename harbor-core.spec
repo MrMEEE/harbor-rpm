@@ -12,8 +12,8 @@ Summary: Harbor Core Service
 Name: harbor-core
 Version: ¤CLEANVERSION¤
 Release: ¤BUILDRELEASE¤%{dist}
-Source0: harbor-core-¤VERSION¤
-Source1: harbor_core.service
+Source0: harbor_core-¤VERSION¤
+Source1: harbor-core.service
 Source2: prepare-¤VERSION¤/common/config/core/app.conf
 Source3: prepare-¤VERSION¤/common/config/core/env
 Source4: db-¤VERSION¤.tar.gz
