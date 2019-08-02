@@ -37,6 +37,7 @@ mkdir -p $RPM_BUILD_ROOT%{service_datadir}/data
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core/token
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core/certificates
+mkdir -p $RPM_BUILD_ROOT%{service_configdir}/secret/core
 mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 mkdir -p $RPM_BUILD_ROOT%{service_logdir}
 
@@ -72,6 +73,7 @@ install -m 755 %{SOURCE6} %{buildroot}/%{service_homedir}/core/views/404.tpl
 %config %{service_configdir}/db
 %{service_homedir}/core
 %dir %{service_datadir}/data
+%dir %{service_configdir}/secret/core
 %attr(0755, bitwarden, bitwarden) %{service_homedir}/core/harbor_core
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
