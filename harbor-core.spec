@@ -72,3 +72,7 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/core/env
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
 %changelog
+* Fri Aug 02 2019 16:58:07 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc1
+* Fri Aug 02 2019 16:55:21 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc1
+* Fri Aug 02 2019 16:53:58 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc1
+- New version build: 1.8.2_rc1
