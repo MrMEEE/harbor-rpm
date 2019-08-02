@@ -38,8 +38,8 @@ mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core/certificates
 mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 mkdir -p $RPM_BUILD_ROOT%{service_logdir}
 
-mv db/ $RPM_BUILD_ROOT%{service_configdir}/db/initial
-mv migrations/postgresql $RPM_BUILD_ROOT%{service_configdir}/db/migrations
+mv db-¤VERSION¤/db/ $RPM_BUILD_ROOT%{service_configdir}/db/initial
+mv db-¤VERSION¤/migrations/postgresql $RPM_BUILD_ROOT%{service_configdir}/db/migrations
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/core/harbor_core
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-core.service
