@@ -14,8 +14,8 @@ Version: ¤CLEANVERSION¤
 Release: ¤BUILDRELEASE¤%{dist}
 Source0: harbor_core-¤VERSION¤
 Source1: harbor-core.service
-Source2: prepare-¤VERSION¤/common/config/core/app.conf
-Source3: prepare-¤VERSION¤/common/config/core/env
+Source2: app.conf
+Source3: env
 Source4: db-¤VERSION¤.tar.gz
 License: GPLv3
 Group: System Tools
