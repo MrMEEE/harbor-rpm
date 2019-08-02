@@ -17,6 +17,8 @@ Source1: harbor-core.service
 Source2: app.conf
 Source3: env
 Source4: db-¤VERSION¤.tar.gz
+Source5: reset-password-mail.tpl
+Source6: 404.tpl
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
@@ -29,7 +31,7 @@ AutoReqProv: false
 tar zxf %{SOURCE4}
 
 %install
-mkdir -p $RPM_BUILD_ROOT%{service_homedir}/core
+mkdir -p $RPM_BUILD_ROOT%{service_homedir}/core/views
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/db
 mkdir -p $RPM_BUILD_ROOT%{service_datadir}/data
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core
@@ -45,6 +47,8 @@ install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/core/harbor_core
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-core.service
 install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/core/app.conf
 install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/core/env
+install -m 755 %{SOURCE5} %{buildroot}/%{service_homedir}/core/views/reset-password-mail.tpl
+install -m 755 %{SOURCE6} %{buildroot}/%{service_homedir}/core/views/404.tpl
 
 %pre
 /usr/bin/getent group %{service_group} >/dev/null || /usr/sbin/groupadd --system %{service_group}
