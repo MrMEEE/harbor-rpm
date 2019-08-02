@@ -64,11 +64,11 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/core/env
 
 %files
 %defattr(0644, harbor, harbor, 0755)
-%config %{service_configdir}/harbor/core
-%config %{service_configdir}/harbor/db
+%config %{service_configdir}/core
+%config %{service_configdir}/db
 %{service_homedir}/core
 %dir %{service_datadir}/data
-%attr(0755, bitwarden, bitwarden) %{service_homedir}/core/harbor-core
+%attr(0755, bitwarden, bitwarden) %{service_homedir}/core/harbor_core
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
 %changelog
