@@ -19,6 +19,8 @@ Source3: env
 Source4: db-¤VERSION¤.tar.gz
 Source5: reset-password-mail.tpl
 Source6: 404.tpl
+Source7: prepare
+Source8: harbor.yml
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
@@ -32,6 +34,7 @@ tar zxf %{SOURCE4}
 
 %install
 mkdir -p $RPM_BUILD_ROOT%{service_homedir}/core/views
+mkdir -p $RPM_BUILD_ROOT%{service_homedir}/setup
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/db
 mkdir -p $RPM_BUILD_ROOT%{service_datadir}/data
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core
@@ -50,6 +53,8 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/core/app.conf
 install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/core/env
 install -m 755 %{SOURCE5} %{buildroot}/%{service_homedir}/core/views/reset-password-mail.tpl
 install -m 755 %{SOURCE6} %{buildroot}/%{service_homedir}/core/views/404.tpl
+install -m 755 %{SOURCE7} %{buildroot}/%{service_homedir}/setup/prepare
+install -m 755 %{SOURCE8} %{buildroot}/%{service_homedir}/setup/harbor.yml
 
 %pre
 /usr/bin/getent group %{service_group} >/dev/null || /usr/sbin/groupadd --system %{service_group}
@@ -72,9 +77,11 @@ install -m 755 %{SOURCE6} %{buildroot}/%{service_homedir}/core/views/404.tpl
 %config %{service_configdir}/core
 %config %{service_configdir}/db
 %{service_homedir}/core
+%{service_homedir}/setup
 %dir %{service_datadir}/data
 %dir %{service_configdir}/secret/core
 %attr(0755, bitwarden, bitwarden) %{service_homedir}/core/harbor_core
+%attr(0755, bitwarden, bitwarden) %{service_homedir}/setup/prepare
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
 %changelog
