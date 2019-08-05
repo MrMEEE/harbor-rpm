@@ -19,7 +19,7 @@ Source3: env
 Source4: db-¤VERSION¤.tar.gz
 Source5: reset-password-mail.tpl
 Source6: 404.tpl
-Source7: prepare
+Source7: prepareapp-¤VERSION¤.tar.gz
 Source8: harbor.yml
 License: GPLv3
 Group: System Tools
@@ -46,6 +46,7 @@ mkdir -p $RPM_BUILD_ROOT%{service_logdir}
 
 mv db-¤VERSION¤/db/ $RPM_BUILD_ROOT%{service_configdir}/db/initial
 mv db-¤VERSION¤/migrations/postgresql $RPM_BUILD_ROOT%{service_configdir}/db/migrations
+cd %{buildroot}/%{service_homedir}/setup/ && tar zxf %{SOURCE7}
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/core/harbor_core
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-core.service
@@ -53,7 +54,6 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/core/app.conf
 install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/core/env
 install -m 755 %{SOURCE5} %{buildroot}/%{service_homedir}/core/views/reset-password-mail.tpl
 install -m 755 %{SOURCE6} %{buildroot}/%{service_homedir}/core/views/404.tpl
-install -m 755 %{SOURCE7} %{buildroot}/%{service_homedir}/setup/prepare
 install -m 755 %{SOURCE8} %{buildroot}/%{service_homedir}/setup/harbor.yml
 
 %pre
