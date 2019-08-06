@@ -1,0 +1,12 @@
+[Unit]
+Description=Harbor Registry Control
+After=network.target
+
+[Service]
+User=root
+Group=root
+ExecStart=/opt/harbor/registryctl/harbor_registryctl -c /etc/harbor/registryctl/config.yml
+WorkingDirectory=/opt/harbor/registryctl
+
+[Install]
+WantedBy=multi-user.target
