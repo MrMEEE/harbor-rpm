@@ -26,13 +26,7 @@ AutoReqProv: false
 
 %install
 mkdir -p $RPM_BUILD_ROOT%{service_homedir}/jobservice
-mkdir -p $RPM_BUILD_ROOT%{service_configdir}/db
-mkdir -p $RPM_BUILD_ROOT%{service_datadir}/data
-mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core
-mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core/token
-mkdir -p $RPM_BUILD_ROOT%{service_configdir}/core/certificates
-mkdir -p $RPM_BUILD_ROOT%{_unitdir}
-mkdir -p $RPM_BUILD_ROOT%{service_logdir}
+mkdir -p $RPM_BUILD_ROOT%{service_configdir}/jobservice
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/core/harbor_core
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-core.service
