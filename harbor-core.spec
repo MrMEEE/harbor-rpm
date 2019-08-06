@@ -81,7 +81,7 @@ install -m 755 %{SOURCE8} %{buildroot}/%{service_homedir}/setup/harbor.yml
 %dir %{service_datadir}/data
 %dir %{service_configdir}/secret/core
 %attr(0755, bitwarden, bitwarden) %{service_homedir}/core/harbor_core
-%attr(0755, bitwarden, bitwarden) %{service_homedir}/setup/prepare
+%attr(0755, bitwarden, bitwarden) %{service_homedir}/setup
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
 %changelog
