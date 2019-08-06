@@ -30,6 +30,7 @@ AutoReqProv: false
 mkdir -p $RPM_BUILD_ROOT%{service_homedir}/jobservice
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/jobservice
 mkdir -p $RPM_BUILD_ROOT%{service_logdir}/jobs
+mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/jobservice/harbor_jobservice
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-jobservice.service
