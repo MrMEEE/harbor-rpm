@@ -13,7 +13,7 @@ Name: harbor
 Version: ¤CLEANVERSION¤
 Release: ¤BUILDRELEASE¤%{dist}
 Source0: nginx.conf
-Soruce1: harbor.service
+Source1: harbor.service
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
@@ -32,8 +32,10 @@ Requires: harbor-registry == ¤REGISTRYVERSION¤
 
 %install
 mkdir -p $RPM_BUILD_ROOT%{service_homedir}/setup/ansible/files/
+mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/setup/ansible/files/nginx.conf
+install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor.service
 
 %pre
 /usr/bin/getent group %{service_group} >/dev/null || /usr/sbin/groupadd --system %{service_group}
