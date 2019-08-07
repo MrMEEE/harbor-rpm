@@ -1,6 +1,7 @@
 [Unit]
 Description=Harbor Registry Control
-After=network.target
+PartOf=harbor.service
+After=harbor.service
 
 [Service]
 User=harbor
@@ -9,4 +10,4 @@ ExecStart=/opt/harbor/registryctl/harbor_registryctl -c /etc/harbor/registryctl/
 WorkingDirectory=/opt/harbor/registryctl
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=harbor.service
