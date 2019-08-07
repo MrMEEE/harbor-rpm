@@ -3,8 +3,8 @@ Description=Harbor Registry Control
 After=network.target
 
 [Service]
-User=root
-Group=root
+User=harbor
+Group=harbor
 ExecStart=/opt/harbor/registryctl/harbor_registryctl -c /etc/harbor/registryctl/config.yml
 WorkingDirectory=/opt/harbor/registryctl
 
