@@ -1,6 +1,7 @@
 [Unit]
 Description=Harbor Clair Scanning Service
-After=network.target
+PartOf=harbor.service
+After=harbor.service
 
 [Service]
 User=harbor
@@ -10,4 +11,4 @@ ExecStart=/opt/harbor/clair/clair -config /etc/harbor/clair/config.yaml
 WorkingDirectory=/opt/harbor/clair
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=harbor.service
