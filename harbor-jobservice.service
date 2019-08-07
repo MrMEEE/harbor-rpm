@@ -1,6 +1,7 @@
 [Unit]
 Description=Harbor Job Service
-After=network.target
+PartOf=harbor.service
+After=harbor.service
 
 [Service]
 User=harbor
@@ -10,4 +11,4 @@ ExecStart=/opt/harbor/jobservice/harbor_jobservice -c /etc/harbor/jobservice/con
 WorkingDirectory=/opt/harbor/jobservice
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=harbor.service
