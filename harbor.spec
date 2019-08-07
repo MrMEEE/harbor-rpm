@@ -24,6 +24,9 @@ Requires: harbor-core == ¤CLEANVERSION¤
 Requires: harbor-jobservice == ¤CLEANVERSION¤
 Requires: harbor-registryctl == ¤CLEANVERSION¤
 Requires: harbor-registry == ¤REGISTRYVERSION¤
+Requires: rh-python36-python
+Requires: rh-python36-PyYAML
+Requires: rh-python36-python-jinja2
 
 %description
 %{summary}
