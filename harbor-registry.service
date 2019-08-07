@@ -1,0 +1,12 @@
+[Unit]
+Description=Harbor Registry
+After=network.target
+
+[Service]
+User=harbor
+Group=harbor
+ExecStart=/opt/harbor/registry/registry serve /etc/harbor/registry/config.yml
+WorkingDirectory=/opt/harbor/registry
+
+[Install]
+WantedBy=multi-user.target
