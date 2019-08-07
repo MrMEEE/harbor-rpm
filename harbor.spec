@@ -18,6 +18,12 @@ License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
 AutoReqProv: false
+Requires: harbor-chartserver == ¤CHARTVERSION¤
+Requires: harbor-clair == ¤CLAIRVERSION¤
+Requires: harbor-core == ¤CLEANVERSION¤
+Requires: harbor-jobservice == ¤CLEANVERSION¤
+Requires: harbor-registryctl == ¤CLEANVERSION¤
+Requires: harbor-registry == ¤REGISTRYVERSION¤
 
 %description
 %{summary}
