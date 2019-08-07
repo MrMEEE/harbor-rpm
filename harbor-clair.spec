@@ -20,6 +20,7 @@ License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
 AutoReqProv: false
+Requires: git
 
 %description
 %{summary}
