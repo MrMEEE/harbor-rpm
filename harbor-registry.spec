@@ -51,7 +51,7 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/registry/config.yml
 %defattr(0644, harbor, harbor, 0755)
 %config %{service_configdir}/registry
 %{service_homedir}/registry
-%attr(0755, bitwarden, bitwarden) %{service_homedir}/registry/registry
+%attr(0755, harbor, harbor) %{service_homedir}/registry/registry
 %attr(0644, root, root) %{_unitdir}/harbor-registry.service
 
 %changelog
