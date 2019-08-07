@@ -3,8 +3,8 @@ Description=Harbor Job Service
 After=network.target
 
 [Service]
-User=root
-Group=root
+User=harbor
+Group=harbor
 EnvironmentFile=/etc/harbor/jobservice/env
 ExecStart=/opt/harbor/jobservice/harbor_jobservice -c /etc/harbor/jobservice/config.yml
 WorkingDirectory=/opt/harbor/jobservice
