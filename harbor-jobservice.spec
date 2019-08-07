@@ -55,7 +55,7 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/jobservice/config.ym
 %config %{service_configdir}/jobservice
 %{service_homedir}/jobservice
 %dir %{service_logdir}/jobs
-%attr(0755, bitwarden, bitwarden) %{service_homedir}/jobservice/harbor_jobservice
+%attr(0755, harbor, harbor) %{service_homedir}/jobservice/harbor_jobservice
 %attr(0644, root, root) %{_unitdir}/harbor-jobservice.service
 
 %changelog
