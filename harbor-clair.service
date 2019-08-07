@@ -3,8 +3,8 @@ Description=Harbor Clair Scanning Service
 After=network.target
 
 [Service]
-User=root
-Group=root
+User=harbor
+Group=harbor
 EnvironmentFile=/etc/harbor/clair/clair_env
 ExecStart=/opt/harbor/clair/clair -config /etc/harbor/clair/config.yaml
 WorkingDirectory=/opt/harbor/clair
