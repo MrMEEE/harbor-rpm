@@ -53,7 +53,7 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/registryctl/config.y
 %defattr(0644, harbor, harbor, 0755)
 %config %{service_configdir}/registryctl
 %{service_homedir}/registryctl
-%attr(0755, bitwarden, bitwarden) %{service_homedir}/registryctl/harbor_registryctl
+%attr(0755, harbor, harbor) %{service_homedir}/registryctl/harbor_registryctl
 %attr(0644, root, root) %{_unitdir}/harbor-registryctl.service
 
 %changelog
