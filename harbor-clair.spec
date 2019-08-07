@@ -54,7 +54,7 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/clair/config.yaml
 %config %{service_configdir}/clair
 %dir %{service_configdir}/clair/postgresql-init.d
 %{service_homedir}/clair
-%attr(0755, bitwarden, bitwarden) %{service_homedir}/clair/clair
+%attr(0755, harbor, harbor) %{service_homedir}/clair/clair
 %attr(0644, root, root) %{_unitdir}/harbor-clair.service
 
 %changelog
