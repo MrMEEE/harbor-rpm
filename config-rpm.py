@@ -42,5 +42,6 @@ def main():
         root_crt_path=root_crt_path,
         old_private_key_pem_path=old_private_key_pem_path,
         old_crt_path=old_crt_path)
+    os.system("chown harbor:harbor -R /etc/harbor/secret/")
 if __name__ == '__main__':
     main()
