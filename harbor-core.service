@@ -1,6 +1,7 @@
 [Unit]
 Description=Harbor Core Service
-After=network.target
+PartOf=harbor.service
+After=harbor.service
 
 [Service]
 User=harbor
@@ -11,4 +12,4 @@ WorkingDirectory=/opt/harbor/core/
 TimeoutStopSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=harbor.service
