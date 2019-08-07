@@ -1,0 +1,13 @@
+[Unit]
+Description=Harbor Clair Scanning Service
+After=network.target
+
+[Service]
+User=root
+Group=root
+EnvironmentFile=/etc/harbor/clair/clair_env
+ExecStart=/opt/harbor/clair/clair -config /etc/harbor/clair/config.yaml
+WorkingDirectory=/opt/harbor/clair
+
+[Install]
+WantedBy=multi-user.target
