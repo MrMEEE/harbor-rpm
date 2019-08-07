@@ -1,0 +1,13 @@
+[Unit]
+Description=Harbor Chart Server
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/harbor/chartserver/env
+User=harbor
+Group=harbor
+ExecStart=/opt/harbor/chartserver/chartm
+WorkingDirectory=/opt/harbor/chartserver
+
+[Install]
+WantedBy=multi-user.target
