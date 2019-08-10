@@ -39,7 +39,7 @@ cd $RPM_BUILD_ROOT%{service_homedir}/portal && tar zxf %{SOURCE0}
 %clean
 
 %files
-%defattr(0644, harbor, harbor, 0755)
+%defattr(0644, harbor, nginx, 0755)
 %{service_homedir}/portal
 
 %changelog
