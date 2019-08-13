@@ -11,7 +11,7 @@
 Summary: Harbor Core Service
 Name: harbor-core
 Version: 1.8.2_rc2
-Release: 1%{dist}
+Release: 2%{dist}
 Source0: harbor_core-v1.8.2-rc2
 Source1: harbor-core.service
 Source2: app.conf
@@ -85,6 +85,7 @@ install -m 755 %{SOURCE8} %{buildroot}/%{service_homedir}/setup/harbor.yml
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
 %changelog
+* Tue Aug 13 2019 13:18:23 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
 * Tue Aug 13 2019 12:17:17 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
 * Tue Aug 13 2019 11:41:14 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
 * Tue Aug 13 2019 11:25:34 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
