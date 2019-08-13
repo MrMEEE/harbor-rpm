@@ -59,3 +59,5 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/clair/config.yaml
 %attr(0644, root, root) %{_unitdir}/harbor-clair.service
 
 %changelog
+* Tue Aug 13 2019 11:25:34 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
+- New version build: 2.0.8

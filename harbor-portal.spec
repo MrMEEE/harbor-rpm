@@ -43,4 +43,6 @@ cd $RPM_BUILD_ROOT%{service_homedir}/portal && tar zxf %{SOURCE0}
 %{service_homedir}/portal
 
 %changelog
+* Tue Aug 13 2019 11:25:34 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
+- New version build: 1.8.2_rc2
 
