@@ -6,7 +6,7 @@
 %define service_homedir /opt/harbor
 %define service_logdir /var/log/harbor
 %define service_configdir /etc/harbor
-%define service_datadir /var/lib/harbor
+%define service_datadir /var/lib/harbor/registry
 
 Summary: Harbor Registry Service
 Name: harbor-registry
@@ -28,6 +28,7 @@ AutoReqProv: false
 %install
 mkdir -p $RPM_BUILD_ROOT%{service_homedir}/registry
 mkdir -p $RPM_BUILD_ROOT%{service_configdir}/registry
+mkdir -p $RPM_BUILD_ROOT%{service_datadir}
 mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/registry/registry
@@ -53,6 +54,7 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/registry/config.yml
 %{service_homedir}/registry
 %attr(0755, harbor, harbor) %{service_homedir}/registry/registry
 %attr(0644, root, root) %{_unitdir}/harbor-registry.service
+%{service_datadir}
 
 %changelog
 * Wed Aug 14 2019 10:41:29 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2
