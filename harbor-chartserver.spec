@@ -57,6 +57,7 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/chartserver/env
 %attr(0644, root, root) %{_unitdir}/harbor-chartserver.service
 
 %changelog
+* Wed Aug 14 2019 10:41:29 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2
 * Tue Aug 13 2019 13:18:23 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
 * Tue Aug 13 2019 12:17:17 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
 * Tue Aug 13 2019 11:41:14 +0000 Martin Juhl <mj@casalogic.dk> 1.8.2_rc2
