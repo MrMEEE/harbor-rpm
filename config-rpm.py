@@ -25,12 +25,14 @@ def main():
     if not path.exists("/etc/harbor/secret/registry/root.crt"):
         core_secret = generate_random_string(16)
         jobservice_secret = generate_random_string(16)
+        chartserver_secret = generate_random_string(16)
         os.system("sed -i 's/^CORE_SECRET=.*$/CORE_SECRET={}/g' /etc/harbor/core/env".format(core_secret))
         os.system("sed -i 's/^JOBSERVICE_SECRET=.*$/JOBSERVICE_SECRET={}/g' /etc/harbor/core/env".format(jobservice_secret))
         os.system("sed -i 's/^CORE_SECRET=.*$/CORE_SECRET={}/g' /etc/harbor/jobservice/env".format(core_secret))
         os.system("sed -i 's/^JOBSERVICE_SECRET=.*$/JOBSERVICE_SECRET={}/g' /etc/harbor/jobservice/env".format(jobservice_secret))
         os.system("sed -i 's/^CORE_SECRET=.*$/CORE_SECRET={}/g' /etc/harbor/registryctl/env".format(core_secret))
         os.system("sed -i 's/^JOBSERVICE_SECRET=.*$/JOBSERVICE_SECRET={}/g' /etc/harbor/registryctl/env".format(jobservice_secret))
+        os.system("sed -i 's/^BASIC_AUTH_PASS=.*$/BASIC_AUTH_PASS={}/g' /etc/harbor/registryctl/env".format(chartserver_secret))
 
     get_secret_key("/etc/harbor/secret/keys/")
 
