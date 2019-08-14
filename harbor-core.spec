@@ -47,6 +47,7 @@ mkdir -p $RPM_BUILD_ROOT%{service_logdir}
 mv db-¤VERSION¤/db/ $RPM_BUILD_ROOT%{service_configdir}/db/initial
 mv db-¤VERSION¤/migrations/postgresql $RPM_BUILD_ROOT%{service_configdir}/db/migrations
 cd %{buildroot}/%{service_homedir}/setup/ && tar zxf %{SOURCE7}
+echo "¤CLEANVERSION¤" > $RPM_BUILD_ROOT%{service_homedir}/core/UIVERSION
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/core/harbor_core
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-core.service
