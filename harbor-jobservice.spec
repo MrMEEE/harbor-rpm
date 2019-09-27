@@ -59,6 +59,8 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/jobservice/config.ym
 %attr(0644, root, root) %{_unitdir}/harbor-jobservice.service
 
 %changelog
+* Fri Sep 27 2019 14:15:32 +0000 Martin Juhl <mj@casalogic.dk> 1.9.1_rc1
+- New version build: 1.9.1_rc1
 * Wed Sep 11 2019 18:15:49 +0000 Martin Juhl <mj@casalogic.dk> 1.9.0_rc2
 - New version build: 1.9.0_rc2
 * Wed Sep 04 2019 06:14:54 +0000 Martin Juhl <mj@casalogic.dk> 1.9.0_rc1
