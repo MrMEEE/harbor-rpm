@@ -57,6 +57,8 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/registryctl/config.y
 %attr(0644, root, root) %{_unitdir}/harbor-registryctl.service
 
 %changelog
+* Thu Nov 14 2019 19:12:31 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
+- New version build: 1.9.3_rc1
 * Sun Nov 03 2019 15:08:58 +0000 Martin Juhl <mj@casalogic.dk> 1.9.2_rc1
 - New version build: 1.9.2_rc1
 * Fri Sep 27 2019 14:15:32 +0000 Martin Juhl <mj@casalogic.dk> 1.9.1_rc1
