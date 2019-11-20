@@ -60,6 +60,7 @@ install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor.service
 %attr(0644, root, root) %{_unitdir}/harbor.service
 
 %changelog
+* Wed Nov 20 2019 19:01:50 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
 * Wed Nov 20 2019 16:47:17 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
 * Thu Nov 14 2019 19:12:31 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
 - New version build: 1.9.3_rc1
