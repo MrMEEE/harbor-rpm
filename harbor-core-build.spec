@@ -10,16 +10,16 @@
 
 Summary: Harbor Core Service
 Name: harbor-core
-Version: 1.9.3_rc1
+Version: 1.10.0_rc1
 Release: 1%{dist}
-Source0: harbor_core-v1.9.3-rc1
+Source0: harbor_core-v1.10.0-rc1
 Source1: harbor-core.service
 Source2: app.conf
 Source3: env
-Source4: db-v1.9.3-rc1.tar.gz
+Source4: db-v1.10.0-rc1.tar.gz
 Source5: reset-password-mail.tpl
 Source6: 404.tpl
-Source7: prepareapp-v1.9.3-rc1.tar.gz
+Source7: prepareapp-v1.10.0-rc1.tar.gz
 Source8: harbor.yml
 License: GPLv3
 Group: System Tools
@@ -44,10 +44,10 @@ mkdir -p $RPM_BUILD_ROOT%{service_configdir}/secret/core
 mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 mkdir -p $RPM_BUILD_ROOT%{service_logdir}
 
-mv db-v1.9.3-rc1/db/ $RPM_BUILD_ROOT%{service_configdir}/db/initial
-mv db-v1.9.3-rc1/migrations/postgresql $RPM_BUILD_ROOT%{service_configdir}/db/migrations
+mv db-v1.10.0-rc1/db/ $RPM_BUILD_ROOT%{service_configdir}/db/initial
+mv db-v1.10.0-rc1/migrations/postgresql $RPM_BUILD_ROOT%{service_configdir}/db/migrations
 cd %{buildroot}/%{service_homedir}/setup/ && tar zxf %{SOURCE7}
-echo "1.9.3_rc1" > $RPM_BUILD_ROOT%{service_homedir}/core/UIVERSION
+echo "1.10.0_rc1" > $RPM_BUILD_ROOT%{service_homedir}/core/UIVERSION
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/core/harbor_core
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-core.service
@@ -86,6 +86,8 @@ install -m 755 %{SOURCE8} %{buildroot}/%{service_homedir}/setup/harbor.yml
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
 %changelog
+* Fri Nov 22 2019 11:08:55 +0000 Martin Juhl <mj@casalogic.dk> 1.10.0_rc1
+- New version build: 1.10.0_rc1
 * Wed Nov 20 2019 19:01:50 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
 * Wed Nov 20 2019 16:47:17 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
 * Thu Nov 14 2019 19:12:31 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1

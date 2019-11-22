@@ -86,6 +86,8 @@ install -m 755 %{SOURCE8} %{buildroot}/%{service_homedir}/setup/harbor.yml
 %attr(0644, root, root) %{_unitdir}/harbor-core.service
 
 %changelog
+* Fri Nov 22 2019 11:08:55 +0000 Martin Juhl <mj@casalogic.dk> 1.10.0_rc1
+- New version build: 1.10.0_rc1
 * Wed Nov 20 2019 19:01:50 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
 * Wed Nov 20 2019 16:47:17 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
 * Thu Nov 14 2019 19:12:31 +0000 Martin Juhl <mj@casalogic.dk> 1.9.3_rc1
