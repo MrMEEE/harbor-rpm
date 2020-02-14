@@ -12,10 +12,9 @@ Summary: Harbor Clair Scanning Service Adapter
 Name: harbor-clair-adapter
 Version: ¤CLEANVERSION¤
 Release: ¤BUILDRELEASE¤%{dist}
-Source0: clair-¤VERSION¤
-Source1: harbor-clair.service
-Source2: clair_env
-Source3: config.yaml
+Source0: harbor-scanner-clair-¤VERSION¤
+Source1: harbor-clair-adapter.service
+Source2: env
 License: GPLv3
 Group: System Tools
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
@@ -28,13 +27,12 @@ Requires: git
 %prep
 
 %install
-mkdir -p $RPM_BUILD_ROOT%{service_homedir}/clairadapter
+mkdir -p $RPM_BUILD_ROOT%{service_homedir}/clair-adapter
 mkdir -p $RPM_BUILD_ROOT%{_unitdir}
 
-install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/clairadapter/clairadapter
+install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/clair-adapter/clair-adapter
 install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-clair.service
 install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/clairadapter/env
-install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/clairadapter/config.yaml
 
 %pre
 /usr/bin/getent group %{service_group} >/dev/null || /usr/sbin/groupadd --system %{service_group}
