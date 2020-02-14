@@ -1,0 +1,14 @@
+[Unit]
+Description=Harbor Clair Scanning Service
+PartOf=harbor.service
+After=harbor.service
+
+[Service]
+User=harbor
+Group=harbor
+EnvironmentFile=/etc/harbor/clair/clair_env
+ExecStart=/opt/harbor/clair/clair -config /etc/harbor/clair/config.yaml
+WorkingDirectory=/opt/harbor/clair
+
+[Install]
+WantedBy=harbor.service
