@@ -1,6 +1,6 @@
 [Unit]
 Description=Harbor
-Requires=harbor-chartserver.service harbor-clair.service harbor-core.service harbor-jobservice.service harbor-registry.service harbor-registryctl.service
+Requires=harbor-chartserver.service harbor-clair.service harbor-core.service harbor-jobservice.service harbor-registry.service harbor-registryctl.service harbor-clair-adapter.service
 After=syslog.target network.target
 
 [Service]
