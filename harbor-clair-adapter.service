@@ -7,7 +7,7 @@ After=harbor.service
 User=harbor
 Group=harbor
 EnvironmentFile=/etc/harbor/clair-adapter/env
-ExecStart=/opt/harbor/clair-adapter/harbor-scanner-clair
+ExecStart=/opt/harbor/clair-adapter/clair-adapter
 WorkingDirectory=/opt/harbor/clair-adapter
 
 [Install]
