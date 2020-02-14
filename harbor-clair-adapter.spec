@@ -49,9 +49,9 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/clairadapter/env
 
 %files
 %defattr(0644, harbor, harbor, 0755)
-%config %{service_configdir}/clairadapter
-%{service_homedir}/clairadapter
-%attr(0755, harbor, harbor) %{service_homedir}/clairadapter/clairadapter
+%config %{service_configdir}/clair-adapter
+%{service_homedir}/clair-adapter
+%attr(0755, harbor, harbor) %{service_homedir}/clair-adapter/clair-adapter
 %attr(0644, root, root) %{_unitdir}/harbor-clair-adapter.service
 
 %changelog
