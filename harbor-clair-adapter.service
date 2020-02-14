@@ -6,9 +6,9 @@ After=harbor.service
 [Service]
 User=harbor
 Group=harbor
-EnvironmentFile=/etc/harbor/clair/clair_env
-ExecStart=/opt/harbor/clair/clair -config /etc/harbor/clair/config.yaml
-WorkingDirectory=/opt/harbor/clair
+EnvironmentFile=/etc/harbor/clair-adapter/env
+ExecStart=/opt/harbor/clair-adapter/harbor-scanner-clair
+WorkingDirectory=/opt/harbor/clair-adapter
 
 [Install]
 WantedBy=harbor.service
