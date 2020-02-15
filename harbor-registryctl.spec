@@ -57,6 +57,7 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/registryctl/config.y
 %attr(0644, root, root) %{_unitdir}/harbor-registryctl.service
 
 %changelog
+* Sat Feb 15 2020 03:22:08 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.1_rc1
 * Sat Feb 15 2020 03:03:36 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.1_rc1
 * Tue Feb 11 2020 07:09:14 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.1_rc1
 - New version build: 1.10.1_rc1
