@@ -29,7 +29,7 @@ Requires: git
 %install
 mkdir -p $RPM_BUILD_ROOT%{service_homedir}/clair-adapter
 mkdir -p $RPM_BUILD_ROOT%{_unitdir}
-mkdir -p $RPM_BUILD_ROOT%{service_configdir}/clair-adapter/env
+mkdir -p $RPM_BUILD_ROOT%{service_configdir}/clair-adapter
 
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/clair-adapter/clair-adapter
