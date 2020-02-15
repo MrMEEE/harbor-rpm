@@ -20,6 +20,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}.buildroot
 AutoReqProv: false
 Requires: harbor-chartserver == ¤CHARTVERSION¤
 Requires: harbor-clair == ¤CLAIRVERSION¤
+Requires: harbor-clair-adapter == ¤CLAIRADAPTERVERSION¤
 Requires: harbor-portal == ¤CLEANVERSION¤
 Requires: harbor-core == ¤CLEANVERSION¤
 Requires: harbor-jobservice == ¤CLEANVERSION¤
