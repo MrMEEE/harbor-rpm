@@ -59,6 +59,7 @@ install -m 755 %{SOURCE3} %{buildroot}/%{service_configdir}/jobservice/config.ym
 %attr(0644, root, root) %{_unitdir}/harbor-jobservice.service
 
 %changelog
+* Sat Feb 15 2020 03:03:36 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.1_rc1
 * Tue Feb 11 2020 07:09:14 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.1_rc1
 - New version build: 1.10.1_rc1
 * Fri Dec 06 2019 11:09:41 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.0_rc2

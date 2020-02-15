@@ -57,3 +57,5 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/clair-adapter/env
 %attr(0644, root, root) %{_unitdir}/harbor-clair-adapter.service
 
 %changelog
+* Sat Feb 15 2020 03:03:36 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.1_rc1
+- New version build: 1.0.1
