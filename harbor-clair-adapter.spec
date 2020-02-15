@@ -33,7 +33,7 @@ mkdir -p $RPM_BUILD_ROOT%{service_configdir}/clair-adapter/env
 
 
 install -m 755 %{SOURCE0} %{buildroot}/%{service_homedir}/clair-adapter/clair-adapter
-install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-clair.service
+install -m 755 %{SOURCE1} %{buildroot}/%{_unitdir}/harbor-clair-adapter.service
 install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/clair-adapter/env
 
 %pre
