@@ -1,0 +1,3 @@
+HTTP_PROXY=
+HTTPS_PROXY=
+NO_PROXY=core,localhost,nginx,notary-signer,notary-server,clair-adapter,jobservice,127.0.0.1,redis,.local,clair,portal,registryctl,chartmuseum,registry,postgresql,db,log,.internal
