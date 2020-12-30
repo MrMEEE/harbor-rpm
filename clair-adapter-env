@@ -1,0 +1,5 @@
+SCANNER_LOG_LEVEL=info
+SCANNER_CLAIR_URL=http://localhost:6060
+SCANNER_CLAIR_DATABASE_URL=postgresql://clair:clair_db_password@localhost:5432/clair?sslmode=disable
+SCANNER_STORE_REDIS_URL=redis://localhost:6379/4
+SCANNER_API_SERVER_ADDR=:8083
