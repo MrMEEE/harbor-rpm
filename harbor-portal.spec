@@ -43,6 +43,8 @@ cd $RPM_BUILD_ROOT%{service_homedir}/portal && tar zxf %{SOURCE0}
 %{service_homedir}/portal
 
 %changelog
+* Wed Dec 30 2020 14:19:04 +0000 Martin Juhl <m@rtinjuhl.dk> 2.1.2_rc1
+- New version build: 2.1.2_rc1
 * Sun Apr 05 2020 14:09:37 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.2_rc1
 - New version build: 1.10.2_rc1
 * Sat Feb 15 2020 03:22:08 +0000 Martin Juhl <m@rtinjuhl.dk> 1.10.1_rc1
