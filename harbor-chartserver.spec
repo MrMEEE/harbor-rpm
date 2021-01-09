@@ -57,6 +57,7 @@ install -m 755 %{SOURCE2} %{buildroot}/%{service_configdir}/chartserver/env
 %attr(0644, root, root) %{_unitdir}/harbor-chartserver.service
 
 %changelog
+* Sat Jan 09 2021 19:10:43 +0000 Martin Juhl <m@rtinjuhl.dk> 2.1.3_rc2
 * Thu Jan 07 2021 03:09:54 +0000 Martin Juhl <m@rtinjuhl.dk> 2.1.3_rc1
 * Wed Dec 30 2020 14:19:04 +0000 Martin Juhl <m@rtinjuhl.dk> 2.1.2_rc1
 - New version build: 0.12.0
